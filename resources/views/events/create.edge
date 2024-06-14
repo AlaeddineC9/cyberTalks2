@@ -1,0 +1,42 @@
+@layout.base({
+    title: "create a new event",
+    description: "create a new event on the Cybertalks platform and share it with the world."
+  })
+  
+  
+  @let(offline = asset('resources/assets/offline.png'))
+  @let(online = asset('resources/assets/online.png'))
+  
+  {{-- <div>
+    <ul class="flex items-center justify-center gap-3 p-5 text-sm text-slate-600">
+      <li><a href="{{ route('homepage')}}">Homepage</a></li>
+      <li>•</li>
+      <li><a href="{{ route('events')}}">All events</a></li>
+      <li>•</li>
+      <li>{{ event.title }}</li>
+    </ul>
+  </div> --}}
+  
+  <section>
+    <form action="" method="post" class="flex flex-col gap-3 my-10">
+      <input type="text" name="title" id="" placeholder="title" class="border border-slate-300" required>
+      <textarea name="description" id="" placeholder="description" class="border border-slate-300" cols="30" rows="10"></textarea>
+      <label for="startAt">the event start at</label>
+      <input type="datetime-local" name="starAt" id="" class="border border-slate-300" required>
+      <label for="startAt">the event end at</label>
+      <input type="datetime-local" name="endAt" id="" class="border border-slate-300" required>
+      <label for="startAt">the event is it online</label>
+      <input type="checkbox" name="online" id="" placeholder="" class="border border-slate-300">
+      <input type="text" name="address" id="" placeholder="address" class="border border-slate-300">
+      <input type="text" name="city" id="" placeholder="city" class="border border-slate-300">
+      <select name="country" id="">
+        <option value="France">France</option>
+      </select>
+      <button type="submit">save</button>
+    </form>
+  </section>
+  
+  
+  
+  @end
+  
